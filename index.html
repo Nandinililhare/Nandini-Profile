@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
   <header class="site-header" id="top">
     <nav class="nav" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Nandini Lilhare home">
@@ -20,10 +22,12 @@
         <span></span>
       </button>
       <div class="nav-links" id="nav-links">
-        <a href="#expertise">Expertise</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
+        <a href="#expertise" data-section="expertise">Expertise</a>
+        <a href="#experience" data-section="experience">Experience</a>
+        <a href="#skills" data-section="skills">Skills</a>
+        <a href="#education" data-section="education">Education</a>
+        <a href="#resume" data-section="resume">Resume</a>
+        <a class="nav-cta" href="mailto:nandini19.lilhare@gmail.com">Contact</a>
       </div>
     </nav>
   </header>
@@ -31,18 +35,25 @@
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-inner">
-        <div class="hero-content">
+        <div class="hero-content reveal">
           <p class="eyebrow">Senior Application Developer</p>
-          <h1 id="hero-title">Building scalable backend systems across banking, telecom, IoT, and cloud-native platforms.</h1>
+          <h1 id="hero-title">Building scalable backend systems across <span class="grad-text">banking, telecom, IoT</span> and cloud-native platforms.</h1>
           <p class="hero-copy">
             Nandini Lilhare brings 8+ years of experience designing high-performance Java and Spring Boot systems, file-processing pipelines, GraphQL services, AWS Serverless APIs, and AI-enabled engineering workflows.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="mailto:nandini19.lilhare@gmail.com">Contact Nandini</a>
-            <a class="button secondary" href="Nandini_Lilhare_Resume.pdf" target="_blank" rel="noreferrer">View Resume</a>
+            <a class="button primary" href="mailto:nandini19.lilhare@gmail.com">
+              <span>Contact Nandini</span>
+            </a>
+            <a class="button secondary" href="#resume">
+              <span>View Resume</span>
+            </a>
+            <button class="button ghost" type="button" id="downloadResumeBtn">
+              <span>Download Resume</span>
+            </button>
           </div>
         </div>
-        <aside class="profile-panel" aria-label="Profile summary">
+        <aside class="profile-panel reveal" aria-label="Profile summary">
           <div class="profile-avatar">NL</div>
           <dl>
             <div>
@@ -66,7 +77,7 @@
       </div>
     </section>
 
-    <section class="metrics" aria-label="Career highlights">
+    <section class="metrics reveal" aria-label="Career highlights">
       <div>
         <strong>8+</strong>
         <span>Years of backend delivery</span>
@@ -86,24 +97,28 @@
     </section>
 
     <section class="section" id="expertise">
-      <div class="section-heading">
+      <div class="section-heading reveal">
         <p class="eyebrow">Core Strengths</p>
         <h2>Backend ownership from design to production.</h2>
       </div>
       <div class="expertise-grid">
-        <article>
+        <article class="reveal">
+          <div class="card-icon">⚙️</div>
           <h3>Enterprise Java Platforms</h3>
           <p>Java 21, Spring Boot, Spring Batch, Spring Security, Hibernate, JPA, RESTful APIs, microservices, and GraphQL services for production systems.</p>
         </article>
-        <article>
+        <article class="reveal">
+          <div class="card-icon">☁️</div>
           <h3>Cloud-Native Delivery</h3>
           <p>AWS Lambda, API Gateway, S3, DynamoDB, DocumentDB, EC2, SAM-CLI, and CI/CD workflows for serverless and scalable backend products.</p>
         </article>
-        <article>
+        <article class="reveal">
+          <div class="card-icon">📊</div>
           <h3>Data Processing</h3>
           <p>High-volume broker file processing, custom CSV readers, reconciliation APIs, Spring Batch pipelines, protocol buffers, and integration test suites.</p>
         </article>
-        <article>
+        <article class="reveal">
+          <div class="card-icon">🤖</div>
           <h3>AI-Assisted Engineering</h3>
           <p>Spring AI, GitLab Duo, Generative AI, Agentic AI, and WatsonX experience applied to developer productivity and modern backend workflows.</p>
         </article>
@@ -111,12 +126,15 @@
     </section>
 
     <section class="section section-alt" id="experience">
-      <div class="section-heading">
+      <div class="section-heading reveal">
         <p class="eyebrow">Experience</p>
         <h2>Project work with measurable backend impact.</h2>
       </div>
       <div class="timeline">
-        <article class="timeline-item">
+        <article class="timeline-item reveal">
+          <div class="timeline-rail">
+            <span class="timeline-dot"></span>
+          </div>
           <div class="timeline-meta">
             <span>IBM</span>
             <time>May 2021 - Present</time>
@@ -132,7 +150,10 @@
           </div>
         </article>
 
-        <article class="timeline-item">
+        <article class="timeline-item reveal">
+          <div class="timeline-rail">
+            <span class="timeline-dot"></span>
+          </div>
           <div class="timeline-meta">
             <span>Vodafone Idea</span>
             <time>Aug 2022 - Feb 2026</time>
@@ -147,7 +168,10 @@
           </div>
         </article>
 
-        <article class="timeline-item">
+        <article class="timeline-item reveal">
+          <div class="timeline-rail">
+            <span class="timeline-dot"></span>
+          </div>
           <div class="timeline-meta">
             <span>DISH</span>
             <time>May 2021 - Feb 2026</time>
@@ -162,7 +186,10 @@
           </div>
         </article>
 
-        <article class="timeline-item">
+        <article class="timeline-item reveal">
+          <div class="timeline-rail">
+            <span class="timeline-dot"></span>
+          </div>
           <div class="timeline-meta">
             <span>Reliance Jio</span>
             <time>Jul 2020 - Feb 2026</time>
@@ -177,7 +204,10 @@
           </div>
         </article>
 
-        <article class="timeline-item">
+        <article class="timeline-item reveal">
+          <div class="timeline-rail">
+            <span class="timeline-dot"></span>
+          </div>
           <div class="timeline-meta">
             <span>Altran / Aricent</span>
             <time>Nov 2017 - Feb 2026</time>
@@ -195,48 +225,189 @@
     </section>
 
     <section class="section" id="skills">
-      <div class="section-heading">
+      <div class="section-heading reveal">
         <p class="eyebrow">Technical Toolkit</p>
         <h2>Practical depth across backend, cloud, data, and delivery.</h2>
       </div>
       <div class="skill-groups">
-        <article>
+        <article class="reveal">
           <h3>Backend</h3>
-          <p>Java 21, Java 11, Java 8, Spring Boot, Spring Security, Spring Batch, Spring AI, Hibernate, JPA, REST APIs, GraphQL, microservices, Cucumber</p>
+          <div class="chip-row">
+            <span class="chip">Java 21</span><span class="chip">Java 11</span><span class="chip">Java 8</span>
+            <span class="chip">Spring Boot</span><span class="chip">Spring Security</span><span class="chip">Spring Batch</span>
+            <span class="chip">Spring AI</span><span class="chip">Hibernate</span><span class="chip">JPA</span>
+            <span class="chip">REST APIs</span><span class="chip">GraphQL</span><span class="chip">Microservices</span>
+            <span class="chip">Cucumber</span>
+          </div>
         </article>
-        <article>
-          <h3>Cloud & DevOps</h3>
-          <p>AWS Lambda, API Gateway, EC2, S3, DynamoDB, DocumentDB, GitLab, GitLab Duo, Jenkins, Maven, SAM-CLI</p>
+        <article class="reveal">
+          <h3>Cloud &amp; DevOps</h3>
+          <div class="chip-row">
+            <span class="chip">AWS Lambda</span><span class="chip">API Gateway</span><span class="chip">EC2</span>
+            <span class="chip">S3</span><span class="chip">DynamoDB</span><span class="chip">DocumentDB</span>
+            <span class="chip">GitLab</span><span class="chip">GitLab Duo</span><span class="chip">Jenkins</span>
+            <span class="chip">Maven</span><span class="chip">SAM-CLI</span>
+          </div>
         </article>
-        <article>
-          <h3>Databases & Tools</h3>
-          <p>MySQL, SQL Server, Postman, SoapUI, Insomnia, Jira, Dynatrace, Logz.io, WebSphere, Apache Tomcat, JBoss, Linux, Eclipse, IntelliJ</p>
+        <article class="reveal">
+          <h3>Databases &amp; Tools</h3>
+          <div class="chip-row">
+            <span class="chip">MySQL</span><span class="chip">SQL Server</span><span class="chip">Postman</span>
+            <span class="chip">SoapUI</span><span class="chip">Insomnia</span><span class="chip">Jira</span>
+            <span class="chip">Dynatrace</span><span class="chip">Logz.io</span><span class="chip">WebSphere</span>
+            <span class="chip">Apache Tomcat</span><span class="chip">JBoss</span><span class="chip">Linux</span>
+            <span class="chip">Eclipse</span><span class="chip">IntelliJ</span>
+          </div>
         </article>
-        <article>
+        <article class="reveal">
           <h3>Domains</h3>
-          <p>Banking post-trading markets, telecom applications, IoT smart metering, DLMS/COSEM protocols, application layer protocols</p>
+          <div class="chip-row">
+            <span class="chip">Banking / Post-Trading</span><span class="chip">Telecom</span>
+            <span class="chip">IoT Smart Metering</span><span class="chip">DLMS / COSEM</span>
+            <span class="chip">Application Layer Protocols</span>
+          </div>
         </article>
-        <article>
+        <article class="reveal full-span">
           <h3>Languages</h3>
-          <p>English, Hindi, Marathi</p>
+          <div class="chip-row">
+            <span class="chip">English</span><span class="chip">Hindi</span><span class="chip">Marathi</span>
+          </div>
         </article>
       </div>
     </section>
 
     <section class="section compact" id="education">
-      <div class="section-heading">
+      <div class="section-heading reveal">
         <p class="eyebrow">Education</p>
         <h2>Academic foundation.</h2>
       </div>
       <div class="education-list">
-        <article>
+        <article class="reveal">
+          <div class="card-icon">🎓</div>
           <h3>Sunbeam Institute</h3>
           <p>Advanced Computing, 2017</p>
         </article>
-        <article>
+        <article class="reveal">
+          <div class="card-icon">🎓</div>
           <h3>Nagpur University</h3>
           <p>Computer Technology, 2015</p>
         </article>
+      </div>
+    </section>
+
+    <section class="section section-alt resume-section" id="resume">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Resume</p>
+        <h2>Get the full resume, instantly.</h2>
+        <p class="section-sub">View it inline below, or download a clean, print-ready HTML copy to keep offline.</p>
+      </div>
+      <div class="resume-actions reveal">
+        <button class="button primary" type="button" id="downloadResumeBtn2">
+          <span>⬇ Download Resume (HTML)</span>
+        </button>
+        <a class="button secondary" href="#resume-preview">
+          <span>Jump to Preview</span>
+        </a>
+      </div>
+      <div class="resume-preview reveal" id="resume-preview">
+        <div class="resume-doc" id="resumeDoc">
+          <div class="r-head">
+            <h3>NANDINI LILHARE</h3>
+            <p>Senior Application Developer &middot; Maharashtra, India</p>
+            <p>+91 9049700030 &middot; nandini19.lilhare@gmail.com</p>
+          </div>
+
+          <div class="r-block">
+            <h4>Summary</h4>
+            <p>Senior Application Developer with 8+ years of experience designing and delivering scalable, high-performance backend systems across Telecom, IoT, Banking, and Cloud-Native platforms. Strong expertise in Java 21, GraphQL, Spring Boot, Spring Batch, Microservices, Spring AI, AWS Serverless, GitLab Duo, Generative AI/Agentic AI, and WatsonX. Proven ability to build applications from scratch, handle large-scale data processing, and own systems end-to-end in Agile, production environments.</p>
+          </div>
+
+          <div class="r-block">
+            <h4>Experience</h4>
+
+            <div class="r-job">
+              <div class="r-job-head"><strong>IBM</strong><span>05/2021 - Present</span></div>
+              <p class="r-role">Consultant &mdash; Client: Barclays, Broker File Processor (Channel &amp; Venus - BFP), 06/2025 - Present</p>
+              <p class="r-stack">Java 21, Spring Boot, Spring Batch, GraphQL, Kafka, S3, Protocol Buffers, GitLab Duo, Spring AI</p>
+              <ul>
+                <li>Onboarded new brokers for post-trading market systems</li>
+                <li>Designed scalable file-processing pipelines for large broker files from S3</li>
+                <li>Generated QuoteStore files using Google Protocol Buffers, decoupled from source formats</li>
+                <li>Implemented high-performance batch processing using Spring Batch</li>
+                <li>Built real-time monitoring dashboard for batch execution tracking</li>
+                <li>Developed customizable CSV/file reader to support multiple broker formats</li>
+                <li>Reduced build time from 20 mins to 5 mins via build cache optimization</li>
+                <li>Developed Reconciliation APIs to validate processed vs generated records</li>
+                <li>Standardized common broker mappings to eliminate duplication</li>
+                <li>Built integration test suites using Cucumber</li>
+              </ul>
+            </div>
+
+            <div class="r-job">
+              <div class="r-job-head"><strong>Vodafone Idea</strong><span>08/2022 - 02/2026</span></div>
+              <p class="r-role">Client</p>
+              <p class="r-stack">Java 11, Spring Boot, MySQL, WebSphere, GitLab</p>
+              <ul>
+                <li>Designed and developed secure REST APIs for mobile backend systems</li>
+                <li>Managed MySQL performance tuning, deployments, and schema updates</li>
+                <li>Translated business requirements into scalable backend solutions</li>
+                <li>Supported eKYC workflows and SIM enablement processes</li>
+              </ul>
+            </div>
+
+            <div class="r-job">
+              <div class="r-job-head"><strong>DISH &mdash; Rate Plan Configurator</strong><span>05/2021 - 02/2026</span></div>
+              <p class="r-stack">Java 11, AWS Lambda, API Gateway, DynamoDB, DocumentDB, SAM-CLI</p>
+              <ul>
+                <li>Built backend system from scratch using AWS Serverless architecture</li>
+                <li>Designed and deployed APIs using AWS Lambda &amp; API Gateway</li>
+                <li>Automated infrastructure deployment via SAM-CLI</li>
+                <li>Integrated third-party APIs and managed DocumentDB CRUD operations</li>
+                <li>Implemented centralized exception-handling framework</li>
+                <li>Authored low-level design documentation</li>
+                <li>Owned end-to-end backend development and AWS infrastructure</li>
+              </ul>
+            </div>
+
+            <div class="r-job">
+              <div class="r-job-head"><strong>Reliance Jio &mdash; Java Developer</strong><span>07/2020 - 02/2026</span></div>
+              <p class="r-role">Space on Hire</p>
+              <p class="r-stack">Java 8, Spring Boot, Spring Security, Spring Batch, MySQL, Angular 8</p>
+              <ul>
+                <li>Implemented authentication and authorization using Spring Security</li>
+                <li>Developed bulk data processing pipelines using Spring Batch</li>
+                <li>Created stored procedures and integrated billing workflows</li>
+                <li>Used Spring Profiling for environment-specific configurations</li>
+              </ul>
+            </div>
+
+            <div class="r-job">
+              <div class="r-job-head"><strong>Altran (Aricent Technologies) &mdash; Software Engineer</strong><span>11/2017 - 02/2026</span></div>
+              <p class="r-role">Client: Itron</p>
+              <p class="r-stack">Java 8, Spring, Hibernate, Maven, TestNG, GitLab</p>
+              <ul>
+                <li>Developed and integrated smart meter solutions for Advanced Meter Monitoring (AMM) systems</li>
+                <li>Implemented meter data parsing using DLMS/COSEM protocols</li>
+                <li>Built backend components using Spring and Hibernate</li>
+                <li>Performed unit, functional, integration, and end-to-end testing</li>
+                <li>Automated performance and reliability test scenarios</li>
+                <li>Contributed to Network Platform Automation (DLCA, CAAS, Registrar modules)</li>
+                <li>Supported design enhancements, GitLab code merges, and provisioning workflow automation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="r-block">
+            <h4>Skills</h4>
+            <p>Java 21, Java 11, Java 8, Spring Boot, Spring Security, Spring Batch, Spring AI, Hibernate, JPA, RESTful APIs, Microservices, GraphQL, Cucumber, AWS Lambda, API Gateway, EC2, S3, DynamoDB, DocumentDB, GitLab, GitLab Duo, Jenkins, Maven, SAM-CLI, MySQL, SQL Server, Postman, SoapUI, Insomnia, Jira, Dynatrace, Logz.io, WebSphere, Apache Tomcat, JBoss, Linux, Eclipse, IntelliJ, Telecom Applications, IoT &amp; Smart Metering, Banking Domain (Post-Trading Market), Application Layer Protocols (DLMS/COSEM C1219), English, Hindi, Marathi</p>
+          </div>
+
+          <div class="r-block">
+            <h4>Education</h4>
+            <p><strong>Sunbeam Institute</strong> &mdash; Advanced Computing, 12/2017</p>
+            <p><strong>Nagpur University</strong> &mdash; Computer Technology, 12/2015</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
